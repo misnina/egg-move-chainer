@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "PKMNDPPt";
+  src: url('./fonts/PokemonDPPt.ttf') format("truetype");
+}
+
+$main-font: 'PKMNDPPt';
+$background-image: './images/background.jpg';
+
+$main-color-light: #FFEDAC;
+$main-color-dark: #FFCB5C;
+$accent-color: #95CDB3;
+$shadow-color: #541743;
+
+//SETUP
+
+body, html, #root {
+  margin: 0;
+  height: 100%;
+}
+
+html {
+  font-family: $main-font;
+  font-size: 1.3rem;
+  background-color: #FF6F69;
+}
+
+.app {
+  min-width: 100%;
+  
+}
+
+//UTILS
+
+.flex {
+  display: flex;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.h-center {
+  align-items: center;
+}
+
+h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h4 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+//SPECIFICS
+
+.entry {
+  background-color: white;
+  max-width: 800px;
+  margin: 20px;
+  box-shadow: 0px 0px 5px 0px rgba($shadow-color ,0.75);
+  border-radius: 5px;
+  padding: 20px;
+
+  button {
+    border: none;
+    margin: 2px;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    background-color: $main-color-dark;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $accent-color;
+    }
+  }
+
+  .egg-moves {
+    width: 100%;
+    justify-content: space-between;
+    background-color:$main-color-light;
+
+    &:nth-child(even) {
+      background-color: $main-color-dark;
+
+      button {
+        background-color: $main-color-light;
+
+        &:hover {
+          background-color: $accent-color;
+        }
+      }
+    }
+
+    .move-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 10px;
+      min-width: 150px;
+    }
+    
+    .sprite-list {
+      padding: 10px;
+      text-align: right;
+    } 
+  }
+}
+
+//MEDIA QUERY
+
+@media (max-width: 780px) {
+  .egg-moves {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .sprite-list {
+    text-align: center !important;
+  }
+}
