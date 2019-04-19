@@ -8,6 +8,7 @@ $background-image: './images/background.jpg';
 
 $main-color-light: #FFEDAC;
 $main-color-dark: #FFCB5C;
+$egg-move-light: #FF6F69;
 $accent-color: #95CDB3;
 $shadow-color: #541743;
 
@@ -21,7 +22,7 @@ body, html, #root {
 html {
   font-family: $main-font;
   font-size: 1.3rem;
-  background-color: #FF6F69;
+  background-color: $egg-move-light;
 }
 
 .app {
@@ -72,6 +73,18 @@ select {
 
 //SPECIFICS
 
+.use-text {
+  margin: 20px;
+}
+
+.circle {
+  margin: 10px;
+  height: 40px;
+  width: 40px;
+  border: 2px solid $shadow-color;
+  border-radius: 50%;
+}
+
 header {
   margin-top: 20px;
   width: 100%;
@@ -95,6 +108,10 @@ header {
     background-color: $main-color-dark;
     border-radius: 50%;
     cursor: pointer;
+
+    &.chain {
+      background-color: $egg-move-light;
+    }
 
     &:hover {
       background-color: $accent-color;
@@ -121,6 +138,10 @@ header {
 
       button {
         background-color: $main-color-light;
+        
+        &.chain {
+          background-color: $egg-move-light;
+        }
 
         &:hover {
           background-color: $accent-color;
@@ -145,6 +166,10 @@ header {
 //MEDIA QUERY
 
 @media (max-width: 780px) {
+  .use-text {
+    font-size: 0.75rem;
+  }
+
   .egg-moves {
     justify-content: center;
     flex-direction: column;

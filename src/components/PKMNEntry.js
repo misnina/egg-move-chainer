@@ -40,7 +40,7 @@ class PKMNEntry extends Component {
       if (Array.isArray(learnedMoves[level])) {
         learnedMoves[level].forEach(move => {
           moves.push(
-            <div>
+            <div key={`${level}-${move}`}>
               {`[${level}]: `}
               {move}
             </div>
@@ -48,7 +48,7 @@ class PKMNEntry extends Component {
         })
       } else {
         moves.push(
-          <div>
+          <div key={`${level}-${learnedMoves[level]}`}>
             {`[${level}]: `}
             {learnedMoves[level]}
           </div>
@@ -65,14 +65,21 @@ class PKMNEntry extends Component {
       let sprites = pkmnWithChain.map(pokemon => {
         return (
           <button
+            className={`${this.props.isEggChain(move, pokemon.name) ? 'chain' : 'normal'}`}
             onClick={() => this.props.searchByPokemon(pokemon.name)}
+            key={`icon-${pokemon.name}-${move}`}
           >
-            <Sprite name={pokemon.name} />
+            <Sprite
+              name={pokemon.name}
+            />
           </button>
         )
       })
       moves.push(
-        <div className="flex egg-moves">
+        <div
+          className="flex egg-moves"
+          key={`${this.props.name}-${move}`}
+        >
           <div className="move-name">
             {move}:
           </div>

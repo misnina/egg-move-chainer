@@ -132,6 +132,21 @@ const Search = {
       return sortByID(relatedPokemonGroup1);
     }
   },
+
+  isEggChain(move, pokemonName) {
+    let entry = Pokedex[pokemonName];
+    if (!entry.egg_moves) {
+      return false
+    }
+    let isEggChain = false;
+    entry.egg_moves.forEach(moveName => {
+      if (moveName === move) {
+        isEggChain = true;
+      }
+    });
+    console.log(isEggChain);
+    return isEggChain;
+  }
 }
 
 export default Search;

@@ -7,7 +7,10 @@ import './style.scss';
 import App from './App';
 
 ReactDOM.render(
-  <Router history={createBrowserHistory()}>
+  <Router
+    history={createBrowserHistory()}
+    basename={process.env.PUBLIC_URL}
+  >
     <Route path="/" component={App} />
   </Router>
   , document.getElementById('root'));

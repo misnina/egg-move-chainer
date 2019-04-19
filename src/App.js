@@ -6,7 +6,6 @@ import Pokedex from './pokedex.json';
 import Header from './components/Header';
 import PKMNEntry from './components/PKMNEntry';
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -32,6 +31,7 @@ class App extends Component {
             learnedMoves={Pokedex[match.params.pokemon].moveset}
             searchEggMoves={Search.forEggMoves}
             searchByPokemon={this.searchByPokemon}
+            isEggChain={Search.isEggChain}
           />
         }
         } />
