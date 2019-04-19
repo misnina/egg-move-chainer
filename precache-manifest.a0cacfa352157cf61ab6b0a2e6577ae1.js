@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/egg-move-chainer/static/css/main.3caa343a.chunk.css"
   },
   {
-    "revision": "7165df0b9b3cef3267e13537e827ff62",
+    "revision": "38f3d442f3433666e3a3da81d86844cc",
     "url": "/egg-move-chainer/index.html"
   }
 ];
