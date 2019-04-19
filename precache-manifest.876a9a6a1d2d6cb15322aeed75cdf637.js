@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/egg-move-chainer/static/js/runtime~main.9bced9a8.js"
   },
   {
-    "revision": "2be8ae56fbf80888d995",
-    "url": "/egg-move-chainer/static/js/main.d93bd180.chunk.js"
+    "revision": "33bbb8265584afbe686b",
+    "url": "/egg-move-chainer/static/js/main.02d287ba.chunk.js"
   },
   {
     "revision": "15ea71b6f678634a3f94",
     "url": "/egg-move-chainer/static/js/2.6f9976e6.chunk.js"
   },
   {
-    "revision": "2be8ae56fbf80888d995",
+    "revision": "33bbb8265584afbe686b",
     "url": "/egg-move-chainer/static/css/main.3caa343a.chunk.css"
   },
   {
-    "revision": "38f3d442f3433666e3a3da81d86844cc",
+    "revision": "e18e4b6c4812aa9dbaa054f98637c59d",
     "url": "/egg-move-chainer/index.html"
   }
 ];
