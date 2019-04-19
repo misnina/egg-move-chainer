@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/egg-move-chainer/precache-manifest.dad6402049777e151870107670002b32.js"
+  "/egg-move-chainer/precache-manifest.16d66d80385f81670da2d08da00a96ca.js"
 );
 
 workbox.clientsClaim();
