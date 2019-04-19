@@ -13,7 +13,7 @@ export default function PKMNSelect(props) {
     </option>)
   }
   return (
-    <div>
+    <div className="select">
       <select>
         {options}
       </select>

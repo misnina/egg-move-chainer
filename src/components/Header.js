@@ -4,7 +4,7 @@ import PKMNSelect from './PKMNSelect';
 
 export default function Header(props) {
   return (
-    <header>
+    <header className="h-center">
       <PKMNSelect
         searchByPokemon={props.searchByPokemon}
       />

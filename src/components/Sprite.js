@@ -8,6 +8,9 @@ export default function Sprite(props) {
     .replace(/♂/g, "-m")
     .toLowerCase();
   return (
-    <img src={`${process.env.PUBLIC_URL}/regular/${imageName}.png`} alt={props.name} title={props.name} />
+    <img
+      src={`${process.env.PUBLIC_URL}/regular/${imageName}.png`}
+      alt={props.name}
+      title={props.name} />
   );
 }

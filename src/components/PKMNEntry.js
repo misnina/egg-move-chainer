@@ -61,10 +61,12 @@ class PKMNEntry extends Component {
   displayEggMoves(moveList) {
     let moves = [];
     moveList.forEach(move => {
-      let pkmnWithChain = this.props.searchEggChain(this.props.searchName, move);
+      let pkmnWithChain = this.props.searchEggMoves(this.props.searchName, move);
       let sprites = pkmnWithChain.map(pokemon => {
         return (
-          <button onClick={() => this.props.searchByPokemon(pokemon.name)}>
+          <button
+            onClick={() => this.props.searchByPokemon(pokemon.name)}
+          >
             <Sprite name={pokemon.name} />
           </button>
         )

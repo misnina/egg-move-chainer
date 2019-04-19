@@ -27,7 +27,11 @@ function getMoveset(pokemon) {
   return learnedMoves;
 }
 
-function searchableName(pokemon) {
+function sortByID(pokemonArray) {
+  return pokemonArray.sort((a, b) => a.id - b.id);
+}
+
+export function searchableName(pokemon) {
   return pokemon
     .replace(/\s+/g, '-')
     .replace(/[.,':\s]/g, "")
@@ -108,26 +112,26 @@ const Search = {
     }
   },
 
-  forEggChain(pokemon, move) {
+  forEggMoves(pokemon, move) {
     const relatedPokemonGroup1 = Search.byEggAndMove(move, Pokedex[pokemon].egg_groups[0]);
 
     if (Pokedex[pokemon].egg_groups[1]) {
       const relatedPokemonGroup2 = Search.byEggAndMove(move, Pokedex[pokemon].egg_groups[1]);
 
       let combine = relatedPokemonGroup1.concat(relatedPokemonGroup2);
-      return [...new Set(combine)];
+      return sortByID([...new Set(combine)]);
 
     } else if (Pokedex[pokemon].egg_groups[0] === "Undiscovered") {
       if (Pokedex[pokemon].evolutions) {
         let name = searchableName(Pokedex[pokemon].evolutions[0][0]);
-        return Search.forEggChain(name, move);
+        return Search.forEggMoves(name, move);
       } else {
         return [];
       }
     } else {
-      return relatedPokemonGroup1;
+      return sortByID(relatedPokemonGroup1);
     }
-  }
+  },
 }
 
 export default Search;

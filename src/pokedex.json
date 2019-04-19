@@ -32159,7 +32159,7 @@
     ],
     "weight": 75.5
   },
-  "mime jr.": {
+  "mime-jr": {
     "abilities": [
       "Soundproof",
       "Filter"
@@ -32236,7 +32236,7 @@
       "46": "Baton Pass",
       "50": "Safeguard"
     },
-    "name": "mime jr.",
+    "name": "mime-jr",
     "shape": 12,
     "stats": [
       20,
@@ -32942,7 +32942,7 @@
     ],
     "weight": 23.3
   },
-  "mr. mime": {
+  "mr-mime": {
     "abilities": [
       "Soundproof",
       "Filter"
@@ -33018,7 +33018,7 @@
       "46": "Baton Pass",
       "50": "Safeguard"
     },
-    "name": "mr. mime",
+    "name": "mr-mime",
     "shape": 12,
     "stats": [
       40,
